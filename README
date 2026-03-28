@@ -64,7 +64,11 @@ If this is your first time reading the project, follow this order:
 | Milestone 3 showcase outputs | `milestone3/sub-1-outputs/` |
 | Final reports and summaries | `milestone5/reports/` |
 | Grand-average pipeline results | `milestone5/final_pipeline/` |
-
+Key final deliverables
+MNE-style interactive report HTML:
+milestone5/final_pipeline/grand_average_report_cleaned_mne.html
+Final summary JSON:
+milestone5/final_pipeline/summary.json
 ---
 
 ## Running the Project
