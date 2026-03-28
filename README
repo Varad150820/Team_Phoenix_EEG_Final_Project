@@ -1,129 +1,117 @@
-# Team Phoenix EEG Final Project 
+# Team Phoenix — EEG Prediction Error Pipeline
 
-This repository is a **shared project version** prepared for review (for example, by instructors).
-It contains the pipeline code, milestone outputs, reports, and helper scripts in a clean structure.
-
----
-
-## 1) What this repository is
-
-This project studies EEG “prediction error” signals in a VR task and shows a full processing workflow:
-
-- load recordings,
-- clean/filter EEG,
-- create events/epochs,
-- compute evoked responses and metrics,
-- generate final reports.
-
-It is organized as a milestone-style academic project, so each stage is easy to inspect.
+> A clean, milestone-organized EEG processing pipeline for studying prediction error signals in a VR reach-to-object task.
 
 ---
 
-## 2) Important: this is a filtered/shareable version
+## Overview
 
-To keep this GitHub repo easy to share and review, large/raw dataset folders were removed.
+This repository contains the full EEG analysis pipeline, milestone outputs, reports, and helper scripts for Team Phoenix's final project. The study investigates **prediction error signals** in EEG during a VR task, comparing brain responses to expected versus mismatched haptic feedback.
 
-### Included
-- Pipeline code and step-by-step modules
-- Milestone outputs and reports
-- Runner scripts and documentation
-
-### Not included
-- Full raw subject dataset folders used for complete reprocessing from scratch
-- Local virtual environments and bulky legacy data folders
-
-So, this repository is ideal for **understanding the project and reviewing outputs**.
-If you want to rerun everything from raw data, you must add the raw BIDS data separately.
+**Reference publication:**
+Gehrke et al., CHI 2019 — *Detecting Visuo-Haptic Mismatches in Virtual Reality using Prediction Error Negativity of Event-Related Brain Potentials*
+[DOI: 10.1145/3290605.3300657](https://doi.org/10.1145/3290605.3300657)
 
 ---
 
-## 3) Quick tour of the root folders
+## ⚠️ Important: Shared / Review Version
 
-- `milestone2/`
-	- Early milestone visual outputs (continuous EEG and ERP examples).
+This is a **filtered repository** prepared for instructor review. Large raw dataset folders are excluded to keep the repo lightweight and shareable.
 
-- `milestone3/`
-	- Milestone 3 deliverables and showcase outputs.
+| Included | Not Included |
+|---|---|
+| Pipeline code and step-by-step modules | Full raw subject BIDS dataset folders |
+| Milestone outputs and reports | Local virtual environments |
+| Runner scripts and documentation | Bulky legacy data folders |
 
-- `milestone4/`
-	- Milestone 4 scripts and documentation for pipeline progression.
-
-- `milestone5/`
-	- Final outputs and reports (including grand-average results and summary artifacts).
-
-- `pipeline_steps/`
-	- Beginner-friendly breakdown of the EEG pipeline into ordered steps:
-		- load
-		- filter/resample
-		- bad channel handling
-		- ICA artifact handling
-		- events/trials
-		- epoch/reject
-		- evoked/metrics
-
-- `scripts/`
-	- Core runnable scripts used in the project workflow.
-
-- `Run_the_Project/`
-	- PowerShell helper scripts and run instructions for common project tasks.
-
-- `PIPELINE_FLOW.md`
-	- High-level map of how the full workflow moves from raw input to final report.
-
-- `milestones_index.md`
-	- Single-page milestone navigation.
+> To rerun everything from scratch, add the raw BIDS data separately before executing the pipeline scripts.
 
 ---
 
-## 4) Where to start (first-time reader)
+## Repository Structure
+
+```
+.
+├── milestone2/              # Early visual outputs (continuous EEG, ERP examples)
+├── milestone3/              # Milestone 3 deliverables and showcase outputs
+├── milestone4/              # Scripts and docs for pipeline progression
+├── milestone5/              # Final outputs, grand-average results, summary reports
+│
+├── pipeline_steps/          # EEG pipeline broken into ordered steps
+│   ├── load/
+│   ├── filter_resample/
+│   ├── bad_channel/
+│   ├── ica_artifact/
+│   ├── events_trials/
+│   ├── epoch_reject/
+│   └── evoked_metrics/
+│
+├── scripts/                 # Core runnable workflow scripts
+├── Run_the_Project/         # PowerShell helpers for common tasks
+│
+├── PIPELINE_FLOW.md         # High-level map: raw input → final report
+└── milestones_index.md      # Single-page milestone navigation
+```
+
+---
+
+## Where to Start
 
 If this is your first time reading the project, follow this order:
 
-1. `milestones_index.md` (big picture)
-2. `PIPELINE_FLOW.md` (how pipeline steps connect)
-3. `pipeline_steps/README.md` and `pipeline_steps/config.py` (technical core)
-4. `milestone5/README.md` and `milestone5/reports/` (final outcomes)
-
-This order helps you understand **what was done**, then **how it was done**.
+1. **`milestones_index.md`** — big picture of what was done across milestones
+2. **`PIPELINE_FLOW.md`** — how pipeline steps connect end-to-end
+3. **`pipeline_steps/README.md`** and **`pipeline_steps/config.py`** — technical core
+4. **`milestone5/README.md`** and **`milestone5/reports/`** — final outcomes
 
 ---
 
-## 5) How to run things (simple)
+## Key Outputs (Inspect Immediately)
 
-Use the helper folder:
-
-- `Run_the_Project/README.md`
-- `Run_the_Project/run_all_subjects.ps1`
-- `Run_the_Project/rerun_final_aggregation.ps1`
-- `Run_the_Project/open_main_report.ps1`
-
-These are convenience scripts for common actions.
-
-### Note on re-running from scratch
-Because this shared repo excludes raw data, full end-to-end reprocessing requires adding the raw BIDS dataset first.
+| Output | Location |
+|---|---|
+| Milestone 2 visual examples | `milestone2/continuous_data_of_one_subject/` |
+| Milestone 3 showcase outputs | `milestone3/sub-1-outputs/` |
+| Final reports and summaries | `milestone5/reports/` |
+| Grand-average pipeline results | `milestone5/final_pipeline/` |
 
 ---
 
-## 6) Main outputs you can inspect immediately
+## Running the Project
 
-- Milestone 2 visual examples in `milestone2/continuous_data_of_one_subject/`
-- Milestone 3 showcase outputs in `milestone3/sub-1-outputs/`
-- Final milestone reports and summaries in `milestone5/reports/`
-- Final grand-average outputs in `milestone5/final_pipeline/`
+Helper scripts are in `Run_the_Project/`:
+
+```powershell
+# Run the full pipeline across all subjects
+.\Run_the_Project\run_all_subjects.ps1
+
+# Re-run only the final aggregation step
+.\Run_the_Project\rerun_final_aggregation.ps1
+
+# Open the main report directly
+.\Run_the_Project\open_main_report.ps1
+```
+
+See `Run_the_Project/README.md` for full instructions.
 
 ---
 
-## 7) Study context (short version)
+## Pipeline Steps
 
-The underlying study used a VR reach-to-object task and measured EEG responses to expected vs mismatched feedback.
-In simple terms: the analysis looks for brain-signal differences when feedback is normal versus unexpectedly altered.
+The pipeline in `pipeline_steps/` processes EEG data through these ordered stages:
 
-Reference publication:
-- Gehrke et al., CHI 2019, “Detecting Visuo-Haptic Mismatches in Virtual Reality using Prediction Error Negativity of Event-Related Brain Potentials”
-- DOI: https://doi.org/10.1145/3290605.3300657
+1. **Load** — import raw recordings
+2. **Filter / Resample** — bandpass filter and downsample
+3. **Bad Channel Handling** — detect and interpolate noisy channels
+4. **ICA Artifact Handling** — remove eye and muscle artifacts
+5. **Events / Trials** — parse task events and define trial structure
+6. **Epoch / Reject** — cut epochs and reject artifacts
+7. **Evoked / Metrics** — compute ERPs and analysis metrics
 
 ---
 
-## 8) In one sentence
+## Study Context
 
-This is a clean, beginner-friendly, shareable EEG pipeline project repository with milestone outputs and documentation, prepared for easy review and demonstration.
+The underlying study used a **VR reach-to-object task** while recording 64-channel EEG. Participants reached for virtual objects, and on some trials the haptic feedback was subtly mismatched. The analysis targets the **Prediction Error Negativity (PEN)** — an ERP component that reflects the brain's response when sensory feedback violates expectations.
+
+In short: the pipeline detects and quantifies *when the brain notices something is wrong*.
