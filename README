@@ -18,16 +18,6 @@ Gehrke et al., CHI 2019 — *Detecting Visuo-Haptic Mismatches in Virtual Realit
 
 This is a **filtered repository** prepared for instructor review. Large raw dataset folders are excluded to keep the repo lightweight and shareable.
 
-| Included | Not Included |
-|---|---|
-| Pipeline code and step-by-step modules | Full raw subject BIDS dataset folders |
-| Milestone outputs and reports | Local virtual environments |
-| Runner scripts and documentation | Bulky legacy data folders |
-
-> To rerun everything from scratch, add the raw BIDS data separately before executing the pipeline scripts.
-
----
-
 ## Repository Structure
 
 ```
