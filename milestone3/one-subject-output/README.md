@@ -18,4 +18,4 @@ This folder contains presentation-style single-subject figures for milestone 3.
 - `summary.json`
 
 ## Final project HTML report (Git)
-- `final output/final_report/grand_average_report_cleaned_mne.html`
+- `final output/grand_average_report_cleaned_mne.html`

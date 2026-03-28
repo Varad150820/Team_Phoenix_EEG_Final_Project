@@ -10,13 +10,12 @@ This folder captures the project state after milestone 3 and 4 requirements are 
 
 ## Key final deliverables
 - MNE-style interactive report HTML:
-  - `final output/final_report/grand_average_report_cleaned_mne.html`
+  - `final output/grand_average_report_cleaned_mne.html`
 - Final summary JSON:
   - `milestone5/final_pipeline/summary.json`
 
 ## Quick open from reports folder
-- `final output/main_final_report.html`
-- `final output/final_report/grand_average_report_cleaned_mne.html`
+- `final output/grand_average_report_cleaned_mne.html`
 
 ## Reproduction commands
 From repository root:

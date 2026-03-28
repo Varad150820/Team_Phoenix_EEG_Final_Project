@@ -57,4 +57,4 @@ To match milestone 3 presentation needs, a clean output set was created for one 
 
 ## Git final report location
 - Combined final HTML outputs are collected at: `final output/`
-- Main required report file: `final output/final_report/grand_average_report_cleaned_mne.html`
+- Main required report file: `final output/grand_average_report_cleaned_mne.html`

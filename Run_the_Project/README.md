@@ -18,10 +18,10 @@ What it does:
 
 ## Main final report
 After the run finishes, open:
-- `final output/main_final_report.html`
+- `final output/grand_average_report_cleaned_mne.html`
 
 That entry opens the primary report:
-- `final output/final_report/grand_average_report_cleaned_mne.html`
+- `final output/grand_average_report_cleaned_mne.html`
 
 ## Optional commands
 Re-run only final aggregation:
