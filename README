@@ -1,37 +1,129 @@
-### Prediction Error EEG & Motion Study
-This is the dataset of the study "prediction error". In short, 19 participants were tested in a virtual reality (VR) reach-to-object task. In the task participants experienced visual, visual with vibrotactile or visual with vibrotactile (all subjects) and electrical muscle stimulation (EMS) feedback (10 subjects) . In 25% of trials the feedback, 'button selection', was provided prematurely, resulting in prediction error / mismatch ERPs (oddball style paradigm). Participants rated their interactive experience on the Immersion and Presence Questionnaire (IPQ) and their workload on the NASA-TLX.
+# Team Phoenix EEG Final Project (Beginner-Friendly Guide)
 
-Details about the study can be found in the following publication(s):
-- Detecting Visuo-Haptic Mismatches in Virtual Reality using the Prediction Error Negativity of Event-Related Brain Potentials. Lukas Gehrke, Sezen Akman, Pedro Lopes, Albert Chen, Avinash Kumar Singh, Hsiang-Ting Chen, Chin-Teng Lin and Klaus Gramann | In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19). ACM, New York, NY, USA, Paper 427, 11 pages. DOI: https://doi.org/10.1145/3290605.3300657
+This repository is a **shared project version** prepared for review (for example, by instructors).
+It contains the pipeline code, milestone outputs, reports, and helper scripts in a clean structure.
 
-A full repository including data, experimental VR protocol (Unity), and publication resources can be found at [OSF, doi: 10.17605/OSF.IO/X7HNM](https://osf.io/x7hnm/)
+---
 
-### Available Data
-Data include `64 channel EEG + 1 reference` and `12 channel Motion` (6DOF right hand, 6DOF head). Motion metadata is formatted to current preliminary [BIDS Motion](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit), see [how to get involved](https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification).
+## 1) What this repository is
 
-### Data Format and Derivation
-Original data were recorded in `.xdf` format using [labstreaminglayer](https://github.com/sccn/labstreaminglayer). A `\sourcedata` directory is currently missing since our `.xdf` files did not comply with GDPR.
+This project studies EEG “prediction error” signals in a VR task and shows a full processing workflow:
 
-### Project Pipeline Guide
-For a stage-by-stage map of the EEG workflow used in this repository, see `PIPELINE_FLOW.md`.
-It groups the project logically into configuration, filtering, resampling, ICA/artifact removal, epoching, batch processing, aggregation, reports, and debugging helpers.
+- load recordings,
+- clean/filter EEG,
+- create events/epochs,
+- compute evoked responses and metrics,
+- generate final reports.
 
-The per-recording preprocessing has also been split into stage folders inside `pipeline_steps/` (at repository root) so each major EEG step can be inspected separately.
+It is organized as a milestone-style academic project, so each stage is easy to inspect.
 
-The `scripts/` folder is now kept minimal and contains only the core runnable pipeline entry points. Milestone-specific and debug helper scripts were moved into the relevant `milestone3/`, `milestone4/`, and `milestone5/` folders.
+---
 
-### Root milestone folders
-Milestone handoff documentation is available at repository root:
-- `milestone3/README.md`
-- `milestone4/README.md`
-- `milestone5/README.md`
+## 2) Important: this is a filtered/shareable version
+
+To keep this GitHub repo easy to share and review, large/raw dataset folders were removed.
+
+### Included
+- Pipeline code and step-by-step modules
+- Milestone outputs and reports
+- Runner scripts and documentation
+
+### Not included
+- Full raw subject dataset folders used for complete reprocessing from scratch
+- Local virtual environments and bulky legacy data folders
+
+So, this repository is ideal for **understanding the project and reviewing outputs**.
+If you want to rerun everything from raw data, you must add the raw BIDS data separately.
+
+---
+
+## 3) Quick tour of the root folders
+
+- `milestone2/`
+	- Early milestone visual outputs (continuous EEG and ERP examples).
+
+- `milestone3/`
+	- Milestone 3 deliverables and showcase outputs.
+
+- `milestone4/`
+	- Milestone 4 scripts and documentation for pipeline progression.
+
+- `milestone5/`
+	- Final outputs and reports (including grand-average results and summary artifacts).
+
+- `pipeline_steps/`
+	- Beginner-friendly breakdown of the EEG pipeline into ordered steps:
+		- load
+		- filter/resample
+		- bad channel handling
+		- ICA artifact handling
+		- events/trials
+		- epoch/reject
+		- evoked/metrics
+
+- `scripts/`
+	- Core runnable scripts used in the project workflow.
+
+- `Run_the_Project/`
+	- PowerShell helper scripts and run instructions for common project tasks.
+
+- `PIPELINE_FLOW.md`
+	- High-level map of how the full workflow moves from raw input to final report.
+
 - `milestones_index.md`
+	- Single-page milestone navigation.
 
-Raw BIDS subject data (`sub-*`) and core dataset metadata are organized under `milestone4/raw_bids/`.
+---
 
-### Terminal run guide
-For terminal commands and ready-to-use PowerShell launchers, see:
+## 4) Where to start (first-time reader)
+
+If this is your first time reading the project, follow this order:
+
+1. `milestones_index.md` (big picture)
+2. `PIPELINE_FLOW.md` (how pipeline steps connect)
+3. `pipeline_steps/README.md` and `pipeline_steps/config.py` (technical core)
+4. `milestone5/README.md` and `milestone5/reports/` (final outcomes)
+
+This order helps you understand **what was done**, then **how it was done**.
+
+---
+
+## 5) How to run things (simple)
+
+Use the helper folder:
+
 - `Run_the_Project/README.md`
 - `Run_the_Project/run_all_subjects.ps1`
 - `Run_the_Project/rerun_final_aggregation.ps1`
 - `Run_the_Project/open_main_report.ps1`
+
+These are convenience scripts for common actions.
+
+### Note on re-running from scratch
+Because this shared repo excludes raw data, full end-to-end reprocessing requires adding the raw BIDS dataset first.
+
+---
+
+## 6) Main outputs you can inspect immediately
+
+- Milestone 2 visual examples in `milestone2/continuous_data_of_one_subject/`
+- Milestone 3 showcase outputs in `milestone3/sub-1-outputs/`
+- Final milestone reports and summaries in `milestone5/reports/`
+- Final grand-average outputs in `milestone5/final_pipeline/`
+
+---
+
+## 7) Study context (short version)
+
+The underlying study used a VR reach-to-object task and measured EEG responses to expected vs mismatched feedback.
+In simple terms: the analysis looks for brain-signal differences when feedback is normal versus unexpectedly altered.
+
+Reference publication:
+- Gehrke et al., CHI 2019, “Detecting Visuo-Haptic Mismatches in Virtual Reality using Prediction Error Negativity of Event-Related Brain Potentials”
+- DOI: https://doi.org/10.1145/3290605.3300657
+
+---
+
+## 8) In one sentence
+
+This is a clean, beginner-friendly, shareable EEG pipeline project repository with milestone outputs and documentation, prepared for easy review and demonstration.
