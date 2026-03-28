@@ -54,3 +54,7 @@ To match milestone 3 presentation needs, a clean output set was created for one 
 ## Notes
 - This milestone demonstrates the first reproducible single-subject ERP output.
 - The pipeline is now split into root-level stage folders at `pipeline_steps/` for readability and reusability.
+
+## Git final report location
+- Combined final HTML outputs are collected at: `final output/`
+- Main required report file: `final output/final_report/grand_average_report_cleaned_mne.html`

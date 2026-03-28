@@ -18,3 +18,7 @@ These modules split the per-recording EEG preprocessing into explicit stages and
 - `scripts/process_one_recording.py`
 
 The entry-point script links to these root-level modules so execution remains unchanged while repository readability improves.
+
+## Git final report location
+- Combined final HTML outputs are collected at: `final output/`
+- Main required report file: `final output/final_report/grand_average_report_cleaned_mne.html`

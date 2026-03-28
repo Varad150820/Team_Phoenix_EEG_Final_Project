@@ -3,7 +3,8 @@
 This folder now includes a direct entry point to the main final report.
 
 ## Open this first
-- `main_final_report.html` → opens `../final_pipeline/final_grand_average_report.html`
+- `../../final output/main_final_report.html`
+- `../../final output/final_report/grand_average_report_cleaned_mne.html`
 
 ## Other report docs in this folder
 - `milestone3_to_5_report.md`

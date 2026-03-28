@@ -48,3 +48,7 @@ All main scripts were updated to auto-detect this location.
 ## Interpretation
 - Milestone 4 goals are satisfied by the **final pipeline path** (all subjects processed).
 - The milestone route outputs are still useful as a diagnostics trail showing what failed before stabilization.
+
+## Git final report location
+- Combined final HTML outputs are collected at: `final output/`
+- Main required report file: `final output/final_report/grand_average_report_cleaned_mne.html`

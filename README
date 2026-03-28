@@ -61,7 +61,7 @@ If this is your first time reading the project, follow this order:
 | Output | Location |
 |---|---|
 | Milestone 2 visual examples | `milestone2/continuous_data_of_one_subject/` |
-| Milestone 3 showcase outputs | `milestone3/sub-1-outputs/` |
+| Milestone 3 showcase outputs | `milestone3/one-subject-output/` |
 | Final reports and summaries | `milestone5/reports/` |
 | Grand-average pipeline results | `milestone5/final_pipeline/` |
 Key final deliverables
@@ -121,3 +121,15 @@ The pipeline in `pipeline_steps/` processes EEG data through these ordered stage
 The underlying study used a **VR reach-to-object task** while recording 64-channel EEG. Participants reached for virtual objects, and on some trials the haptic feedback was subtly mismatched. The analysis targets the **Prediction Error Negativity (PEN)** — an ERP component that reflects the brain's response when sensory feedback violates expectations.
 
 In short: the pipeline detects and quantifies *when the brain notices something is wrong*.
+
+---
+
+## Final output folder (for GitHub review)
+
+To make final deliverables easy to find on GitHub, key HTML reports are also collected in:
+
+- `final output/`
+
+Required final report location:
+
+- `final output/final_report/grand_average_report_cleaned_mne.html`

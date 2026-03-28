@@ -16,3 +16,6 @@ This folder contains presentation-style single-subject figures for milestone 3.
 - `sub-1_ses-TestVibro_butterfly.png`
 - `sub-1_ses-TestVibro_psd.png`
 - `summary.json`
+
+## Final project HTML report (Git)
+- `final output/final_report/grand_average_report_cleaned_mne.html`
