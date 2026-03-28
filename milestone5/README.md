@@ -11,10 +11,6 @@ This folder captures the project state after milestone 3 and 4 requirements are 
 ## Key final deliverables
 - Main final report HTML (primary):
   - `milestone5/final_pipeline/grand_average_report_cleaned_mne.html`
-- Secondary summary report HTML:
-  - `milestone5/final_pipeline/final_grand_average_report.html`
-- Clean-style report HTML:
-  - `milestone5/final_pipeline/grand_average_report_cleaned_like.html`
 - MNE-style interactive report HTML:
   - `milestone5/final_pipeline/grand_average_report_cleaned_mne.html`
 - Final summary JSON:
