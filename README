@@ -4,7 +4,7 @@
 
 ---
 
-## Overview
+# Overview
 
 This repository contains the full EEG analysis pipeline, milestone outputs, reports, and helper scripts for Team Phoenix's final project. The study investigates **prediction error signals** in EEG during a VR task, comparing brain responses to expected versus mismatched haptic feedback.
 
