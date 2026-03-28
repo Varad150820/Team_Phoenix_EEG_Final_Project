@@ -1,0 +1,15 @@
+{
+  "subject": "1",
+  "session": "TestVibro",
+  "compare_channel": "Oz",
+  "n_bad_channels": 3,
+  "n_ica_excluded": 3,
+  "n_epochs_before": 600,
+  "n_epochs_after": 600,
+  "files": {
+    "ica_topographies": "milestone3/one-subject-output/sub-1_ses-TestVibro_ica_topographies.png",
+    "processed_vs_unprocessed": "milestone3/one-subject-output/sub-1_ses-TestVibro_processed_vs_unprocessed.png",
+    "butterfly": "milestone3/one-subject-output/sub-1_ses-TestVibro_butterfly.png",
+    "psd": "milestone3/one-subject-output/sub-1_ses-TestVibro_psd.png"
+  }
+}

@@ -1,4 +1,4 @@
-# Milestone 3 — First Subject Analyzed
+# Milestone 3 — One Subject Output
 
 ## Goals to be reached
 - Implemented a preprocessing pipeline ✅
@@ -7,8 +7,8 @@
 - First results of one subject (ERP/TRF or similar) ✅
 
 ## Subject analyzed
-- Subject: `sub-5`
-- Session: `TestEMS`
+- Subject: `sub-1`
+- Session: `TestVibro`
 
 ## Pipeline used for this milestone (single-subject route)
 1. Load BrainVision EEG (`.vhdr`)
@@ -23,30 +23,27 @@
 10. Evoked (ERP) computation and export
 
 ## First subject results (evidence)
-Expected milestone 3 visual outputs in this folder:
-- one continuous EEG preview image with event markers
-- one ERP image for the first analyzed subject
+Expected milestone 3 visual outputs are in this folder:
 - one clean single-subject output set for presentation use
+- topography figure
+- processed vs unprocessed comparison
+- butterfly view
+- PSD view
 
-- Continuous EEG with event markers:
-  - `milestone2/continuous_data_of_one_subject/sub-5_ses-TestEMS_continuous_events.png`
-- Subject ERP figure:
-  - `milestone2/continuous_data_of_one_subject/sub-5_ses-TestEMS_erp.png`
-
-## Presentation-style single-subject outputs
-To match milestone 3 presentation needs, a clean output set was added for one strong recording:
+## Presentation-style one-subject output
+To match milestone 3 presentation needs, a clean output set was created for one recording:
 
 - Selected recording: `sub-1` / `TestVibro`
 - ICA topographies:
-  - `milestone3/sub-1-outputs/sub-1_ses-TestVibro_ica_topographies.png`
+  - `milestone3/one-subject-output/sub-1_ses-TestVibro_ica_topographies.png`
 - Processed vs unprocessed comparison:
-  - `milestone3/sub-1-outputs/sub-1_ses-TestVibro_processed_vs_unprocessed.png`
+  - `milestone3/one-subject-output/sub-1_ses-TestVibro_processed_vs_unprocessed.png`
 - Butterfly plot:
-  - `milestone3/sub-1-outputs/sub-1_ses-TestVibro_butterfly.png`
+  - `milestone3/one-subject-output/sub-1_ses-TestVibro_butterfly.png`
 - PSD plot:
-  - `milestone3/sub-1-outputs/sub-1_ses-TestVibro_psd.png`
+  - `milestone3/one-subject-output/sub-1_ses-TestVibro_psd.png`
 - Summary metadata:
-  - `milestone3/sub-1-outputs/summary.json`
+  - `milestone3/one-subject-output/summary.json`
 
 ## Authors vs improved pipeline (changes highlighted)
 
