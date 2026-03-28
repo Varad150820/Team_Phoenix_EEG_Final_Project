@@ -1,0 +1,16 @@
+{
+  "recording": "sub-2_ses-Training",
+  "subject": "2",
+  "session": "Training",
+  "status": "ok",
+  "n_epochs_before": 60,
+  "n_epochs_after": 60,
+  "n_spawn_epochs": 30,
+  "n_touch_epochs": 30,
+  "drop_fraction": 0.0,
+  "n_ica_excluded": 4,
+  "n_bad_channels": 5,
+  "mean_uv_120_300ms": 0.00950723594087777,
+  "rms_uv": 0.8325579570092989,
+  "evoked_file": "sub-2_ses-Training_evoked-ave.fif"
+}

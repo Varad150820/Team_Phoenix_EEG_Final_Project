@@ -1,0 +1,16 @@
+{
+  "recording": "sub-9_ses-TestVibro",
+  "subject": "9",
+  "session": "TestVibro",
+  "status": "ok",
+  "n_epochs_before": 600,
+  "n_epochs_after": 535,
+  "n_spawn_epochs": 268,
+  "n_touch_epochs": 267,
+  "drop_fraction": 0.10833333333333334,
+  "n_ica_excluded": 2,
+  "n_bad_channels": 4,
+  "mean_uv_120_300ms": 0.020780544007054383,
+  "rms_uv": 0.3189369394154651,
+  "evoked_file": "sub-9_ses-TestVibro_evoked-ave.fif"
+}

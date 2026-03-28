@@ -1,0 +1,16 @@
+{
+  "recording": "sub-18_ses-TestVisual",
+  "subject": "18",
+  "session": "TestVisual",
+  "status": "ok",
+  "n_epochs_before": 600,
+  "n_epochs_after": 594,
+  "n_spawn_epochs": 296,
+  "n_touch_epochs": 298,
+  "drop_fraction": 0.01,
+  "n_ica_excluded": 1,
+  "n_bad_channels": 2,
+  "mean_uv_120_300ms": 0.032650884736889506,
+  "rms_uv": 0.359988231305191,
+  "evoked_file": "sub-18_ses-TestVisual_evoked-ave.fif"
+}

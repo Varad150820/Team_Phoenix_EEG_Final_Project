@@ -1,0 +1,12 @@
+{
+  "n_recordings_attempted": 60,
+  "n_recordings_ok": 60,
+  "n_subjects_ok": 19,
+  "noisy_subjects_removed": [
+    "15",
+    "3"
+  ],
+  "final_report_html": "milestone5/final_pipeline/final_grand_average_report.html",
+  "final_like_report_html": "milestone5/final_pipeline/grand_average_report_cleaned_like.html",
+  "final_mne_style_report_html": "milestone5/final_pipeline/grand_average_report_cleaned_mne.html"
+}

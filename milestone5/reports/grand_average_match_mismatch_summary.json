@@ -1,0 +1,14 @@
+{
+  "match_condition": "box:spawned",
+  "mismatch_condition": "box:touched",
+  "difference": "B - A",
+  "channel": "Cz",
+  "n_subjects_by_session": {
+    "TestEMS": 11,
+    "TestVibro": 19,
+    "TestVisual": 19
+  },
+  "figure_png": "grand_average_match_mismatch_three_graphs.png",
+  "report_html": "grand_average_match_mismatch_report.html",
+  "mne_report_html": "grand_average_match_mismatch_mne_report.html"
+}

@@ -1,0 +1,16 @@
+{
+  "recording": "sub-12_ses-TestEMS",
+  "subject": "12",
+  "session": "TestEMS",
+  "status": "ok",
+  "n_epochs_before": 207,
+  "n_epochs_after": 207,
+  "n_spawn_epochs": 103,
+  "n_touch_epochs": 104,
+  "drop_fraction": 0.0,
+  "n_ica_excluded": 3,
+  "n_bad_channels": 4,
+  "mean_uv_120_300ms": 0.11278553591198359,
+  "rms_uv": 0.8617464240466127,
+  "evoked_file": "sub-12_ses-TestEMS_evoked-ave.fif"
+}

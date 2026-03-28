@@ -1,0 +1,54 @@
+{
+  "subjects_total": 19,
+  "raw_recordings_total": 60,
+  "derivative_reports_total": 4,
+  "evoked_outputs_total": 1,
+  "milestone4_all_subjects_complete": false,
+  "pipeline_step_status": {
+    "data_loaded": {
+      "status": "done",
+      "evidence": "Raw BIDS files exist in sub-*/ses-*/eeg"
+    },
+    "data_quality": {
+      "status": "done",
+      "evidence": "Cache folder _01_data_quality"
+    },
+    "filtering": {
+      "status": "done",
+      "evidence": "Cache folder _04_frequency_filter; proc-filt_raw.fif exists for sub-5 TestEMS"
+    },
+    "event_handling": {
+      "status": "done",
+      "evidence": "Config has event_repeated='drop' and events.tsv contains duplicate_event markers"
+    },
+    "epoching": {
+      "status": "done",
+      "evidence": "Cache folder _07_make_epochs; epo.fif exists for sub-5 TestEMS"
+    },
+    "auto_cleaning_ptp": {
+      "status": "done",
+      "evidence": "Cache folder _09_ptp_reject; proc-clean_epo.fif exists for sub-5 TestEMS"
+    },
+    "ica": {
+      "status": "not_done",
+      "evidence": "No ICA step output found in derivatives/cache"
+    },
+    "evoked_subject": {
+      "status": "done",
+      "evidence": "sub-5 TestEMS _ave.fif exists"
+    },
+    "group_average": {
+      "status": "done",
+      "evidence": "sub-average TestEMS evoked file exists"
+    },
+    "all_subjects_processed": {
+      "status": "not_done",
+      "evidence": "Derivatives only for sub-5 (+ sub-average), not for all available subjects"
+    }
+  },
+  "milestone3_outputs": {
+    "continuous": "milestone2/continuous_data_of_one_subject/sub-5_ses-TestEMS_continuous_events.png",
+    "erp": "milestone2/continuous_data_of_one_subject/sub-5_ses-TestEMS_erp.png"
+  },
+  "report_file": "milestone5/reports/milestone3_to_5_report.md"
+}
