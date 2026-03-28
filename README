@@ -71,24 +71,36 @@ Final summary JSON:
 milestone5/final_pipeline/summary.json
 ---
 
-## Running the Project
+Terminal Run Guide
+This folder explains how to run the EEG project from the terminal.
 
-Helper scripts are in `Run_the_Project/`:
+Main command to run the full project
+This is the main workflow for all subjects and all available sessions:
 
-```powershell
-# Run the full pipeline across all subjects
-.\Run_the_Project\run_all_subjects.ps1
+D:/EEG_Lecture/ds003846/mne/Scripts/python.exe scripts/run_all_recordings.py
 
-# Re-run only the final aggregation step
-.\Run_the_Project\rerun_final_aggregation.ps1
+What it does:
 
-# Open the main report directly
-.\Run_the_Project\open_main_report.ps1
-```
+reads raw BIDS data from milestone4/raw_bids/
+processes each available subject/session recording
+prints progress in the terminal
+runs final aggregation automatically
+creates the main final report
+Main final report
+After the run finishes, open:
 
-See `Run_the_Project/README.md` for full instructions.
+milestone5/reports/main_final_report.html
+That entry opens the primary report:
 
----
+milestone5/final_pipeline/grand_average_report_cleaned_mne.html
+Optional commands
+Re-run only final aggregation:
+
+D:/EEG_Lecture/ds003846/mne/Scripts/python.exe scripts/aggregate_final_pipeline.py
+Run only one recording:
+
+D:/EEG_Lecture/ds003846/mne/Scripts/python.exe scripts/process_one_recording.py --subject 5 --session TestEMS
+
 
 ## Pipeline Steps
 
